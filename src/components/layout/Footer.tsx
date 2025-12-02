@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { FlaskConical, MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -9,13 +10,7 @@ export function Footer() {
           {/* Logo & About */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <FlaskConical className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold text-background leading-tight">LabClínico</span>
-                <span className="text-xs text-background/60">Análises Clínicas</span>
-              </div>
+              <img src={logo} alt="Logo do Laboratório" className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="text-background/70 text-sm leading-relaxed">
               Comprometidos com a precisão e qualidade nos resultados de seus exames há mais de 20 anos.
@@ -67,14 +62,15 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-background/70 text-sm">
-                  Rua das Análises, 123<br />
-                  Centro - São Paulo/SP
+                  R. João Miranda Salgueiro, 470<br />
+                  Centro, Porto Ferreira - SP<br />
+                  13660-043
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="tel:+5511999999999" className="text-background/70 hover:text-primary text-sm transition-colors">
-                  (11) 9999-9999
+                <a href="tel:+551935814859" className="text-background/70 hover:text-primary text-sm transition-colors">
+                  (19) 3581-4859
                 </a>
               </li>
               <li className="flex items-center gap-3">

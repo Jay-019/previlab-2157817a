@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Award } from "lucide-react";
+import { ArrowRight, Shield, Award } from "lucide-react";
 import heroImage from "@/assets/hero-laboratory.jpg";
 
 export function HeroSection() {
@@ -51,7 +51,7 @@ export function HeroSection() {
                 <p className="text-sm text-muted-foreground">Pacientes atendidos</p>
               </div>
               <div className="text-center sm:text-left">
-                <p className="text-3xl font-bold text-foreground">200+</p>
+                <p className="text-3xl font-bold text-foreground">50+</p>
                 <p className="text-sm text-muted-foreground">Tipos de exames</p>
               </div>
             </div>
@@ -68,20 +68,8 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
             </div>
             
-            {/* Floating cards */}
-            <div className="absolute -bottom-6 -left-6 bg-card rounded-xl p-4 shadow-lg animate-float hidden lg:block">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Resultado Rápido</p>
-                  <p className="text-xs text-muted-foreground">Em até 24h</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute -top-4 -right-4 bg-card rounded-xl p-4 shadow-lg animate-float hidden lg:block" style={{ animationDelay: "0.5s" }}>
+            {/* Floating card */}
+            <div className="absolute -top-4 -right-4 bg-card rounded-xl p-4 shadow-lg animate-float hidden lg:block">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
                   <Award className="w-5 h-5 text-primary" />

@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Award } from "lucide-react";
 import heroImage from "@/assets/hero-laboratory.jpg";
 
+const RESULTS_URL = "http://191.8.164.122:40061/cgi-bin/pla303.exe?hterm=135&hlab=061";
+
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden gradient-hero">
@@ -34,9 +36,9 @@ export function HeroSection() {
                 </Link>
               </Button>
               <Button variant="hero-outline" size="lg" asChild>
-                <Link to="/resultados">
+                <a href={RESULTS_URL} target="_blank" rel="noopener noreferrer">
                   Acessar Resultados
-                </Link>
+                </a>
               </Button>
             </div>
 

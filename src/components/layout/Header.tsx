@@ -21,7 +21,7 @@ export function Header() {
       <nav className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logo} alt="Logo do Laboratório" className="h-12 w-auto" />
+          <img src={logo} alt="Logo do Laboratório" className="h-16 lg:h-20 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -44,8 +44,8 @@ export function Header() {
 
         {/* Contact Button */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+551935814859" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-            <Phone className="w-4 h-4" />
+          <a href="tel:+551935814859" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold hover:bg-primary/20 transition-colors">
+            <Phone className="w-5 h-5" />
             <span>(19) 3581-4859</span>
           </a>
           <Button asChild>

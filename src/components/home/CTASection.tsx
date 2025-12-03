@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { FileText, Users, ClipboardList } from "lucide-react";
 
+const RESULTS_URL = "http://191.8.164.122:40061/cgi-bin/pla303.exe?hterm=135&hlab=061";
+
 const actions = [
   {
     icon: ClipboardList,
@@ -9,13 +11,15 @@ const actions = [
     description: "Conheça todos os exames disponíveis e orientações de preparo",
     href: "/exames",
     buttonText: "Ver Exames",
+    isExternal: false,
   },
   {
     icon: FileText,
     title: "Resultados",
     description: "Acesse seus resultados de exames online de forma rápida e segura",
-    href: "/resultados",
+    href: RESULTS_URL,
     buttonText: "Ver Resultados",
+    isExternal: true,
   },
   {
     icon: Users,
@@ -23,6 +27,7 @@ const actions = [
     description: "Conheça nossa história, missão e compromisso com sua saúde",
     href: "/sobre",
     buttonText: "Conhecer",
+    isExternal: false,
   },
 ];
 
@@ -56,7 +61,11 @@ export function CTASection() {
                 {action.description}
               </p>
               <Button variant="outline" asChild className="w-full">
-                <Link to={action.href}>{action.buttonText}</Link>
+                {action.isExternal ? (
+                  <a href={action.href} target="_blank" rel="noopener noreferrer">{action.buttonText}</a>
+                ) : (
+                  <Link to={action.href}>{action.buttonText}</Link>
+                )}
               </Button>
             </div>
           ))}

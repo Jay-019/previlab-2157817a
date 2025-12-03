@@ -9,8 +9,9 @@ const navigation = [
   { name: "Início", href: "/" },
   { name: "Exames", href: "/exames" },
   { name: "Sobre Nós", href: "/sobre" },
-  { name: "Resultados", href: "/resultados" },
 ];
+
+const RESULTS_URL = "http://191.8.164.122:40061/cgi-bin/pla303.exe?hterm=135&hlab=061";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,7 +50,7 @@ export function Header() {
             <span>(19) 3581-4859</span>
           </a>
           <Button asChild>
-            <Link to="/resultados">Ver Resultados</Link>
+            <a href={RESULTS_URL} target="_blank" rel="noopener noreferrer">Ver Resultados</a>
           </Button>
         </div>
 
@@ -84,9 +85,9 @@ export function Header() {
             ))}
             <div className="pt-4 border-t border-border">
               <Button asChild className="w-full">
-                <Link to="/resultados" onClick={() => setMobileMenuOpen(false)}>
+                <a href={RESULTS_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
                   Ver Resultados
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

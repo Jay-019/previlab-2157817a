@@ -26,8 +26,8 @@ const examTypes = [
   },
   {
     icon: Briefcase,
-    title: "Admissional",
-    description: "Exame toxicológico para admissão em empresas, especialmente para cargos que envolvem direção de veículos.",
+    title: "Admissional e Demissional",
+    description: "Exame toxicológico para admissão e demissão em empresas, especialmente para cargos que envolvem direção de veículos.",
     details: [
       "Exigido por empresas de transporte",
       "Parte do processo de contratação",
